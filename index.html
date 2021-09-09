@@ -38,7 +38,7 @@ $.localScroll();
 					<li><a href="#portfolio" class="portfolio"><span></span>Portfolio</a></li>
 					<li><a href="#services" class="services"><span></span>Services</a></li>
 					<li><a href="#contact" class="contact"><span></span>Contact</a></li>
-					<li><button class="chat-button2" style="border-radius:50px;background:lightblue;margin-left:100px;" onclick="bootstrapChat();">Chat with Max</button></li>
+					<li><button class="chat-button2" style="border-radius:50px;background:lightblue;margin-left:100px;" onclick="bootstrapChat();">Chat with Max1</button></li>
 				</ul>
 				<div class="cleaner"></div>
 			</div> <!-- END of -->
@@ -224,8 +224,7 @@ $.localScroll();
     .embeddedServiceHelpButton .helpButton .uiButton:focus {
         outline: 1px solid #005290;
     }
-.embeddedServiceHelpButton .helpButton .uiButton.helpButtonDisabled { display: none; }
-.embeddedServiceHelpButton .helpButton .uiButton.helpButtonEnabled { display: none; }
+
 
 
 .chasitorControls .chasitorText{display:none;}
@@ -236,7 +235,7 @@ $.localScroll();
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
     var initESW = function(gslbBaseURL) {
-        embedded_svc.settings.displayHelpButton = true; //Or false
+        embedded_svc.settings.displayHelpButton = false; //Or false
         embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
         //embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
@@ -286,16 +285,6 @@ $.localScroll();
     }
 </script>
 
-<script>
-const chatHandler = function() {
-  if (typeof (window).embedded_svc !== 'undefined') {
-    (window).embedded_svc.onHelpButtonClick();
-  }
-};
-const els = document.getElementsByClassName('chat-button');
-Array.prototype.forEach.call(els, function(el) {
-  el.addEventListener('click', chatHandler);
-});
-</script>
+
 </body>
 </html>
