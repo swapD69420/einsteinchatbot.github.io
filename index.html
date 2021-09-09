@@ -21,6 +21,11 @@ $.localScroll();
 });
 </script> 
 </head>
+<script type='text/javascript'>
+	function bootstrapChat() {
+		embedded_svc.bootstrapEmbeddedService();
+	}
+</script>
 
 <body>
 	<div id="tooplate_wrapper">
@@ -33,7 +38,7 @@ $.localScroll();
 					<li><a href="#portfolio" class="portfolio"><span></span>Portfolio</a></li>
 					<li><a href="#services" class="services"><span></span>Services</a></li>
 					<li><a href="#contact" class="contact"><span></span>Contact</a></li>
-					<li><button class="chat-button" style="border-radius:50px;background:lightblue;margin-left:100px;">Max</button></li>
+					<li><button class="chat-button2" style="border-radius:50px;background:lightblue;margin-left:100px;" onclick="bootstrapChat();">Chat with Max</button></li>
 				</ul>
 				<div class="cleaner"></div>
 			</div> <!-- END of -->
