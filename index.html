@@ -22,19 +22,17 @@ $.localScroll();
 </script> 
 </head>
 <script type='text/javascript'>
-	 function toggler(divId) {
-            $("#" + divId).toggle();
-        }
 	
-	function GFG_Fun() {
-            toggler('divBot');
-            $('#GFG_DOWN').text("DIV Box is toggling.");
-        }
 	function bootstrapChat() {
 		GFG_Fun();
 		embedded_svc.bootstrapEmbeddedService();
 		
 	}
+	function bootstrapHideChat() {
+		embedded_svc.menu.hideButtonAndMenu()
+		
+	}
+	
 </script>
 
 <body>
@@ -49,6 +47,8 @@ $.localScroll();
 					<li><a href="#services" class="services"><span></span>Services</a></li>
 					<li><a href="#contact" class="contact"><span></span>Contact</a></li>
 					<li><button class="chat-button2" style="border-radius:50px;background:lightblue;margin-left:100px;" onclick="bootstrapChat();">Chat with Max2</button></li>
+					<li><button class="chat-button2" style="border-radius:50px;background:lightblue;margin-left:100px;" onclick="bootstrapHideChat();">Hide Chat</button></li>
+
 				</ul>
 				<div class="cleaner"></div>
 			</div> <!-- END of -->
@@ -229,7 +229,7 @@ $.localScroll();
 	
 	
 	
-<div id="divBot">
+
 	<style type='text/css'>
     .embeddedServiceHelpButton .helpButton .uiButton {
         background-color: #005290;
@@ -245,7 +245,7 @@ $.localScroll();
 .embeddedServiceLiveAgentStateChatInputFooter.dynamicResizeTextOneRow{min-height:0px; height:5px;}
 
 </style>     
-</div>
+
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
