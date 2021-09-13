@@ -28,9 +28,13 @@ $.localScroll();
 		
 	}
 	function bootstrapHideChat() {
-		embedded_svc.menu.hideButtonAndMenu()
-		
+  		var x = document.getElementById("myDIV");
+		if (x.style.display === "none") {
+			x.style.display = "block";
+		} else {
+			x.style.display = "none";
 	}
+}
 	
 </script>
 
@@ -228,7 +232,7 @@ $.localScroll();
 	
 	
 	
-
+<div id="myDIV">
 	<style type='text/css'>
     .embeddedServiceHelpButton .helpButton .uiButton {
         background-color: #005290;
@@ -287,7 +291,7 @@ $.localScroll();
         );
     };
 
-    if (!window.embedded_svc) {
+    if (!window.embedded_svc ) {
         var s = document.createElement('script');
         s.setAttribute('src', 'https://deloittecom563-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
         s.onload = function() {
@@ -299,6 +303,6 @@ $.localScroll();
     }
 </script>
 
-
+	</div>
 </body>
 </html>
