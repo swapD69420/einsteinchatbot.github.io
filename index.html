@@ -22,17 +22,9 @@ $.localScroll();
 </script> 
 </head>
 <script type='text/javascript'>
-	
 	function bootstrapChat() {
 		embedded_svc.bootstrapEmbeddedService();
-		
 	}
-	//function bootstrapHideChat() {
-  		//var x = document.getElementsByClassName("showDockableContainer");
-		//x.style.display = "none";
-	//}
-}
-	
 </script>
 
 <body>
@@ -46,9 +38,7 @@ $.localScroll();
 					<li><a href="#portfolio" class="portfolio"><span></span>Portfolio</a></li>
 					<li><a href="#services" class="services"><span></span>Services</a></li>
 					<li><a href="#contact" class="contact"><span></span>Contact</a></li>
-					<li><button class="chat-button2" style="border-radius:50px;background:lightblue;margin-left:100px;" onclick="bootstrapChat();">Chat with Max4</button></li>
-					<!--<li><button class="chat-button2" style="border-radius:50px;background:lightblue;margin-left:100px;" onclick="bootstrapHideChat();">Hide Chat4</button></li>-->
-
+					<li><button class="chat-button2" style="border-radius:50px;background:lightblue;margin-left:100px;" onclick="bootstrapChat();">Chat with Max</button></li>
 				</ul>
 				<div class="cleaner"></div>
 			</div> <!-- END of -->
@@ -226,11 +216,7 @@ $.localScroll();
 		
 		<div class="cleaner"></div>
 	</div>
-	
-	
-	
-<div id="myDIV">
-	<style type='text/css'>
+<style type='text/css'>
     .embeddedServiceHelpButton .helpButton .uiButton {
         background-color: #005290;
         font-family: "Arial", sans-serif;
@@ -238,14 +224,15 @@ $.localScroll();
     .embeddedServiceHelpButton .helpButton .uiButton:focus {
         outline: 1px solid #005290;
     }
-	 
+
+
+	
 	
 	.chasitorControls .chasitorText{display:none;}
 .embeddedServiceLiveAgentStateChatInputFooter .chasitorControls{margin: 0px;}
 .embeddedServiceLiveAgentStateChatInputFooter.dynamicResizeTextOneRow{min-height:0px; height:5px;}
 
-</style>     
-
+</style>
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
@@ -288,7 +275,7 @@ $.localScroll();
         );
     };
 
-    if (!window.embedded_svc ) {
+    if (!window.embedded_svc) {
         var s = document.createElement('script');
         s.setAttribute('src', 'https://deloittecom563-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
         s.onload = function() {
@@ -300,6 +287,6 @@ $.localScroll();
     }
 </script>
 
-	</div>
+
 </body>
 </html>
