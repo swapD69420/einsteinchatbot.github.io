@@ -25,18 +25,6 @@ $.localScroll();
 	function bootstrapChat() {
 		embedded_svc.bootstrapEmbeddedService();
 	}
-	function bootstrapHideChat(){
-      var v = document.getElementsByClassName("showDockableContainer");
-	for (var i=0; i<v.length; i++) {
-		if (v[i].style.display === "none") {
-   			 v[i].style.display = "block";
-  		} else {
-   		 v[i].style.display = "none";
-  }
-}
-}
-
-
 </script>
 
 <body>
@@ -50,9 +38,7 @@ $.localScroll();
 					<li><a href="#portfolio" class="portfolio"><span></span>Portfolio</a></li>
 					<li><a href="#services" class="services"><span></span>Services</a></li>
 					<li><a href="#contact" class="contact"><span></span>Contact</a></li>
-					<li><button class="chat-button2" style="border-radius:50px;background:lightblue;margin-left:100px;" onclick="bootstrapChat();">Chat with Bot</button></li>
-					<li><button class="chat-button2" style="border-radius:50px;background:lightblue;margin-left:100px;" onclick="bootstrapHideChat();">Hide Bot1</button></li>
-
+					<li><button class="chat-button2" style="border-radius:50px;background:lightblue;margin-left:100px;" onclick="bootstrapChat();">Chat with Max</button></li>
 				</ul>
 				<div class="cleaner"></div>
 			</div> <!-- END of -->
