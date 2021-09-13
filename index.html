@@ -22,8 +22,18 @@ $.localScroll();
 </script> 
 </head>
 <script type='text/javascript'>
+	 function toggler(divId) {
+            $("#" + divId).toggle();
+        }
+	
+	function GFG_Fun() {
+            toggler('div');
+            $('#GFG_DOWN').text("DIV Box is toggling.");
+        }
 	function bootstrapChat() {
+		GFG_Fun();
 		embedded_svc.bootstrapEmbeddedService();
+		
 	}
 </script>
 
@@ -38,7 +48,7 @@ $.localScroll();
 					<li><a href="#portfolio" class="portfolio"><span></span>Portfolio</a></li>
 					<li><a href="#services" class="services"><span></span>Services</a></li>
 					<li><a href="#contact" class="contact"><span></span>Contact</a></li>
-					<li><button class="chat-button2" style="border-radius:50px;background:lightblue;margin-left:100px;" onclick="bootstrapChat();">Chat with Max</button></li>
+					<li><button class="chat-button2" style="border-radius:50px;background:lightblue;margin-left:100px;" onclick="bootstrapChat();">Chat with Max1</button></li>
 				</ul>
 				<div class="cleaner"></div>
 			</div> <!-- END of -->
@@ -216,7 +226,11 @@ $.localScroll();
 		
 		<div class="cleaner"></div>
 	</div>
-<style type='text/css'>
+	
+	
+	
+	<div id="div">
+	<style type='text/css'>
     .embeddedServiceHelpButton .helpButton .uiButton {
         background-color: #005290;
         font-family: "Arial", sans-serif;
@@ -225,8 +239,6 @@ $.localScroll();
         outline: 1px solid #005290;
     }
 
-
-	
 	
 	.chasitorControls .chasitorText{display:none;}
 .embeddedServiceLiveAgentStateChatInputFooter .chasitorControls{margin: 0px;}
@@ -286,7 +298,7 @@ $.localScroll();
         initESW('https://service.force.com');
     }
 </script>
-
+</div>
 
 </body>
 </html>
