@@ -22,16 +22,19 @@ $.localScroll();
 </script> 
 </head>
 <script type='text/javascript'>
-	
+	let flag = false;
 	function bootstrapChat() {
-		embedded_svc.bootstrapEmbeddedService();
-		
+		if (flag === false)
+			{embedded_svc.bootstrapEmbeddedService();
+			 flag = true;
+			}
 	}
 	
 	function bootstraphidechat(){
 	var matches = document.getElementsByClassName("dockableContainer showDockableContainer");
 	for (var i=0; i<matches.length; i++) {
 		if (matches[i].style.display === "none") {
+			bootstrapChat();
    			 matches[i].style.display = "flex";
   		} else {
     			matches[i].style.display = "none";
