@@ -30,14 +30,17 @@ $.localScroll();
 			}
 	}
 	
-	function bootstraphidechat(){
+	function bootstraphidechat(nav){
 	var matches = document.getElementsByClassName("dockableContainer showDockableContainer");
 	for (var i=0; i<matches.length; i++) {
 		if (matches[i].style.display === "none") {
-			bootstrapChat();
    			 matches[i].style.display = "flex";
+			 nav.src='images/chat_minimsed1.png';
+        		 nav.className="minimised";
   		} else {
     			matches[i].style.display = "none";
+			el.src='images/chatlogo1.png';
+        		el.className="chatopen";
   }
 	}	
       }
@@ -72,8 +75,8 @@ $.localScroll();
 					<li><a href="#portfolio" class="portfolio"><span></span>Portfolio</a></li>
 					<li><a href="#services" class="services"><span></span>Services</a></li>
 					<li><a href="#contact" class="contact"><span></span>Contact</a></li>
-					<li><button class="chatopen"  onclick="bootstrapChat();"><img src="images/chatlogo1.png"></button></li>
-					<li><button class="chat-button2" style="border-radius:50px;background:lightblue;margin-left:100px;" onclick="bootstraphidechat();">Hide</button></li>
+					<li><button class="chat-button2"  onclick="bootstrapChat();"><img src="images/chatlogo1.png"></button></li>
+					<li><button class="chatopen" style="border-radius:50px;background:lightblue;margin-left:100px;" onclick="bootstraphidechat(this);"></button></li>
 					<li></li>
 					<li><input type="image" src="images/chatlogo1.png" class="chatopen" onclick="toggle(this);"/></li>
 				</ul>
