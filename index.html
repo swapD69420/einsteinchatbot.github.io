@@ -47,11 +47,13 @@ $.localScroll();
     {
         el.src='images/chat_minimsed1.png';
         el.className="minimised";
+	bootstraphidechat();    
     }
     else if(el.className=="minimised")
     {
         el.src='images/chatlogo1.png';
         el.className="chatopen";
+	bootstraphidechat();    
     }
 
     return false;
