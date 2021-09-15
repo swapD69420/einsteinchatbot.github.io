@@ -31,25 +31,18 @@ $.localScroll();
 	}
 	
 	function bootstraphidechat(nav){
-	 if(nav.className ==="chatstart")
-	 {embedded_svc.bootstrapEmbeddedService();
-		nav.src='images/chat_minimsed1.png';
-        		 nav.className="minimised"; 
-	 }
-	else
-	{var matches = document.getElementsByClassName("dockableContainer showDockableContainer");
-	for (var i=0; i<matches.length; i++) {
-		if (matches[i].style.display === "none") {
-   			 matches[i].style.display = "flex";
-			 nav.src='images/chat_minimsed1.png';
-        		 nav.className="minimised";
-  		} else {
-    			matches[i].style.display = "none";
-			el.src='images/chatlogo1.png';
-        		el.className="chatopen";
-		}
-  }
-	}	
+		var matches = document.getElementsByClassName("dockableContainer showDockableContainer");
+		for (var i=0; i<matches.length; i++) {
+			if (matches[i].style.display === "none") {
+   			 	matches[i].style.display = "flex";
+			 	nav.src='images/chat_minimsed1.png';
+        		 	nav.className="minimised";
+  			} else {
+    				matches[i].style.display = "none";
+				el.src='images/chatlogo1.png';
+        			el.className="chatopen";
+			}
+		}	
       }
 	
 	function toggle(el){
