@@ -44,8 +44,7 @@ $.localScroll();
 				el.src='images/chatlogo1.png';
         			el.className="chatopen";
 			}
-			if (matches[i].style.display === "none")
-				el.src='images/chatlogo1.png';
+			
 		}	
       }
 	
@@ -61,7 +60,8 @@ $.localScroll();
     {
         el.src='images/chatlogo1.png';
         el.className="chatopen";
-	bootstraphidechat();    
+	bootstraphidechat(); 
+	el.src='images/chatlogo1.png';   
     }
 
     return false;
