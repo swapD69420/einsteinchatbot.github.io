@@ -58,9 +58,7 @@ function toggle(el){
 }
 
 
- embedded_svc.addEventHandler("onChatEndedByChasitor", function(data) {
-    console.log("onChatEndedByChasitor event was fired.  liveAgentSessionKey was ");
-});
+
 
 	
 </script>
@@ -312,6 +310,9 @@ function toggle(el){
                 isOfflineSupportEnabled: false
             }
         );
+	     embedded_svc.addEventHandler("onChatEndedByChasitor", function(data) {
+    	console.log("onChatEndedByChasitor event was fired.  liveAgentSessionKey was ");
+		});
     };
 
     if (!window.embedded_svc) {
