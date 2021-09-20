@@ -36,7 +36,7 @@ $.localScroll();
 		for (var i=0; i<matches.length; i++) {
 			if (matches[i].style.display === "none") {
    			 	matches[i].style.display = "flex";
-			 	
+			 	nav.src='images/chatlogo1.png'';
 				
   			} else {
     				matches[i].style.display = "none";
@@ -52,7 +52,7 @@ $.localScroll();
     {
         el.src='images/chat_minimsed1.png';
         el.className="minimised";
-	bootstraphidechat();    
+	bootstraphidechat(el);    
     }
     else if(el.className=="minimised")
     {
