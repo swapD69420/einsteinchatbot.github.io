@@ -297,17 +297,17 @@ function toggle(el){
         embedded_svc.settings.entryFeature = 'LiveAgent';
 
         embedded_svc.init(
-            'https://deloittecom563-dev-ed.my.salesforce.com',
-            'https://pfizer-chat-developer-edition.ap24.force.com/liveAgentSetupFlow',
+            'https://pfizerpatientservices--helpdesk.my.salesforce.com',
+            'https://helpdesk-testbot.cs27.force.com/liveAgentSetupFlow',
             gslbBaseURL,
-            '00D5g00000BlEt5',
-            'Pfizer_Agents',
+            '00D22000000DPhW',
+            'Test_IBRANCE_group',
             {
-                baseLiveAgentContentURL: 'https://c.la2-c1-ukb.salesforceliveagent.com/content',
-                deploymentId: '5725g00000113jA',
-                buttonId: '5735g00000114e4',
-                baseLiveAgentURL: 'https://d.la2-c1-ukb.salesforceliveagent.com/chat',
-                eswLiveAgentDevName: 'Pfizer_Agents',
+                baseLiveAgentContentURL: 'https://c.la1-c1cs-ph2.salesforceliveagent.com/content',
+                deploymentId: '572220000008PQP',
+                buttonId: '573220000008ONZ',
+                baseLiveAgentURL: 'https://d.la1-c1cs-ph2.salesforceliveagent.com/chat',
+                eswLiveAgentDevName: 'Test_IBRANCE_group',
                 isOfflineSupportEnabled: false
             }
         );
@@ -322,7 +322,7 @@ function toggle(el){
 
     if (!window.embedded_svc) {
         var s = document.createElement('script');
-        s.setAttribute('src', 'https://deloittecom563-dev-ed.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+        s.setAttribute('src', 'https://pfizerpatientservices--helpdesk.my.salesforce.com/embeddedservice/5.0/esw.min.js');
         s.onload = function() {
             initESW(null);
         };
