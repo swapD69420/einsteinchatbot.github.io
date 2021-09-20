@@ -311,7 +311,11 @@ function toggle(el){
             }
         );
 	     embedded_svc.addEventHandler("onChatEndedByChasitor", function(data) {
-    	console.log("onChatEndedByChasitor event was fired.  liveAgentSessionKey was ");
+    	var matches = document.getElementsByClassName("minimised");
+		for (var i=0; i<matches.length; i++) {
+		     console.log("onChatEndedByChasitor event was fired.  liveAgentSessionKey was ");
+			matches[i].src = 'images/chatlogo1.png';
+		}
 		});
     };
 
