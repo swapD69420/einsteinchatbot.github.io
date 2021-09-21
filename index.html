@@ -71,6 +71,7 @@ function toggle(el){
 				<ul>
 					<li><a href="#home" class="home"><span></span>Home</a></li>
 					<li><a href="#portfolio" class="portfolio"><span></span>Portfolio</a></li>
+					<li><a href="#portfolio" class="portfolio"><span></span>Portfolio</a></li>
 
 					<li><a href="#services" class="services"><span></span>Services</a></li>
 					<li><input type="image" src="images/chatlogo1.png" class="chatopen" onclick="toggle(this);"/></li>
@@ -317,9 +318,13 @@ function toggle(el){
 			matches[i].src = 'images/chatlogo1.png';
 		}
 		});
-	 $(".embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items li").css('border', 'none');
-	$(".rich-menu-items").css('border','1px solid black')
-	$(".rich-menu-items").css('border-radius','15px') 
+	    embedded_svc.addEventHandler("onAgentRichMessage", function(data) {
+    		console.log("onChatEstablished event was fired.  liveAgentSessionKey was " );
+		$(".embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items li").css('border', 'none');
+		$(".rich-menu-items").css('border','1px solid black')
+		$(".rich-menu-items").css('border-radius','15px') 
+		    
+});
     };
 
     if (!window.embedded_svc) {
