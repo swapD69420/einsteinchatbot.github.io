@@ -318,8 +318,15 @@ function toggle(el){
 			matches[i].src = 'images/chatlogo1.png';
 		}
 		});
+	    embedded_svc.addEventHandler("onAgentMessage", function(data) {
+    		console.log("onAgentMessage event was fired.  liveAgentSessionKey was " );
+		$(".embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items li").css('border', 'none');
+		$(".rich-menu-items").css('border','1px solid black')
+		$(".rich-menu-items").css('border-radius','15px') 
+		    
+});
 	    embedded_svc.addEventHandler("onAgentRichMessage", function(data) {
-    		console.log("onChatEstablished event was fired.  liveAgentSessionKey was " );
+    		console.log("onAgenRichtMessage event was fired.  liveAgentSessionKey was " );
 		$(".embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items li").css('border', 'none');
 		$(".rich-menu-items").css('border','1px solid black')
 		$(".rich-menu-items").css('border-radius','15px') 
