@@ -263,35 +263,57 @@ function toggle(el){
     .embeddedServiceHelpButton .helpButton .uiButton:focus {
         outline: 1px solid #005290;
     }
-
-
-	
-	
-	.chasitorControls .chasitorText{display:none;}
+    
+    .chasitorControls .chasitorText{display:none;}
 .embeddedServiceLiveAgentStateChatInputFooter .chasitorControls{margin: 0px;}
 .embeddedServiceLiveAgentStateChatInputFooter.dynamicResizeTextOneRow{min-height:0px; height:5px;}
-	
-	
-	.embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items li {border : none !important;}
-	.embeddedServiceLiveAgentStateChatMenuMessage .rich-menu {border: 1px solid #800080 !important; width: 220px;}
-	.embeddedServiceLiveAgentStateChatMenuMessage .rich-menu {border-radius: 10px 10px 10px 10px; #800080 !important;}
-	
-	.embeddedServiceSidebar.layout-docked .dockableContainer{right: 300px}
-	
+
+
+    .embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items li{
+
+border-right:none;
+border-left:none;
+
+border-bottom: 1px solid black;
+}
+.embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items li:first-of-type{
+border-right:none;
+border-left:none;
+border-bottom: 1px solid black;
+}
+.embeddedServiceLiveAgentStateChatMenuMessage ul.rich-menu-items{
+border-top: 2px solid black;
+border-bottom: 2px solid black;
+border-radius :none;
+}
+
+.embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items li:last-of-type{border-radius:0;}
+.embeddedServiceLiveAgentStateChatItem .chatContent ul.rich-menu-items li:first-of-type{border-radius:0;}
+
 .embeddedServiceLiveAgentStateChatMenuMessage .rich-menu-item {color: #1b27bd;}
 .embeddedServiceLiveAgentStateChatMenuMessage .chatContent .rich-menu-item:hover {color: #1b27bd;}
-	
-	.embeddedServiceSidebarMinimizedDefaultUI {right: 300px;}
-	.embeddedServiceLiveAgentStateChatMenuMessage .rich-menu-item {
+
+.embeddedServiceSidebar.layout-docked .dockableContainer {right: 300px;}
+.embeddedServiceSidebarMinimizedDefaultUI {right: 300px;}
+
+button.rich-menu-item.embeddedServiceLiveAgentStateChatRichItem {
+   text-transform: uppercase;
+    font-weight: bold;
+    
+}
+.embeddedServiceLiveAgentStateChatMenuMessage .rich-menu-item {
     text-align: left;
+    font-size: 12px;
     }
     
     .embeddedServiceLiveAgentStateChatMenuMessage .rich-menu-itemOptionIsClicked{
+     text-transform: uppercase;
+    font-weight: bold !important;
     text-align: left;
+    font-size: 12px;
     }
 
- 
-
+ 
 </style>
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
@@ -318,18 +340,18 @@ function toggle(el){
         embedded_svc.settings.enabledFeatures = ['LiveAgent'];
         embedded_svc.settings.entryFeature = 'LiveAgent';
 
-        embedded_svc.init(
+       embedded_svc.init(
             'https://pfizerpatientservices--helpdesk.my.salesforce.com',
             'https://helpdesk-testbot.cs27.force.com/liveAgentSetupFlow',
             gslbBaseURL,
             '00D22000000DPhW',
-            'Test_IBRANCE_group',
+            'IBRANCE_Test_Dynamic_Message',
             {
                 baseLiveAgentContentURL: 'https://c.la1-c1cs-ph2.salesforceliveagent.com/content',
                 deploymentId: '572220000008PQP',
-                buttonId: '573220000008ONZ',
+                buttonId: '573220000008OOm',
                 baseLiveAgentURL: 'https://d.la1-c1cs-ph2.salesforceliveagent.com/chat',
-                eswLiveAgentDevName: 'Test_IBRANCE_group',
+                eswLiveAgentDevName: 'IBRANCE_Test_Dynamic',
                 isOfflineSupportEnabled: false
             }
         );
